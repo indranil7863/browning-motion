@@ -1,0 +1,103 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    
+}
+body {
+    background-color: darkslategray;
+}
+.box {
+    width: 100px;
+    aspect-ratio: 1;
+    background-color: blue;
+    border-radius: 50%;
+    margin: 40px 10px;
+    
+}
+#box1 {
+    animation-name: lefttoright;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+#box2{
+    animation-name: righttoleft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+#box3 {
+    animation-name: left;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes left{
+    from{
+        translate: 0%;
+        background-color: darkmagenta;
+    }
+    to{
+        translate:90vw;
+        background-color: cyan;
+    }
+}
+@keyframes righttoleft {
+    0%{
+        translate: 0%;
+    background-color: aqua;
+    }
+    25%{
+        translate: calc(40vw-100px);
+        background-color: darkmagenta;
+    }
+    50%{
+        translate: 90vw;
+        background-color: crimson;
+
+    }
+    75%{
+        translate: 50vw 50vh;
+        background-color: chartreuse;
+    }
+    100%{
+        translate: 0%;
+        background-color: darkorange;
+    }
+}
+
+@keyframes lefttoright {
+    0%{
+    translate: 0%;
+    background-color: aqua;
+
+    }
+    25%{
+        translate: 50vw 50vh;
+        background-color: chartreuse;
+    }
+
+    50%{
+        translate: 90vw;
+        background-color: crimson;
+    }
+    75% {
+        translate: calc(40vw-100px);
+        background-color: darkmagenta;
+    }
+    100% {
+        translate: 0%;
+        background-color: indianred;
+    }
+}
